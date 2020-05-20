@@ -1,0 +1,74 @@
+/* Breakpoint */
+$tablet_max: "only screen and (min-width : 640px) and (max-width : 959px)";
+$mobile_max: "only screen and (max-width : 639px)";
+$tablet-mobile_max: "only screen and (min-width : 320px) and (max-width : 959px)";
+$desktop_max: "only screen and (min-width : 960px)";
+/* Breakpoint */
+
+/* Color Variables */
+$grey: #f7f8fc;
+$black: #000000;
+$white: #ffffff;
+$labelcolor: #112369;
+$background-newcase: linear-gradient(87deg, #fb6340 0, #fbb140 100%);
+$background-totalcase: linear-gradient(87deg, #f5365c 0, #f56036 100%);
+$background-totaldeath: linear-gradient(87deg, #11cdef 0, #1171ef 100%);
+$background-newdeath: linear-gradient(87deg, #f5365c 0, #f56036 100%);
+$background-totalrecovered: linear-gradient(87deg, #2dce89 0, #2dcecc 100%);
+$background-totalcountriesaffected: #7b6fff;
+$background-totalcaseunresolved: #adefd1ff;
+$background-totalcaseseroius: #ed2b33ff;
+$background-activecase: #99c24d;
+$background-colortable: #f9f9ff;
+$background-totalcaseactive: #ff073a;
+$background-totalcaserecovered: #2dce99;
+$background-totalcasedeath: #6c757d;
+$active-text-color: #007bff;
+$slogan-background: rgba(32, 26, 162, 0.12549);
+$background-totalcaseresult: #dfdfdf;
+$border-color: #cccccc;
+$active-link: rgb(85, 141, 202);
+$light-grey: #666666;
+$visit-state-page-background: #c6f6d5;
+$visit-state-page-color: #38a169;
+$search-result-hover: rgba(108, 117, 125, 0.0627451);
+$news-desc-color: #4a5568;
+$color-header-maps: #6c757d;
+$color-label: #aeaed5;
+/* Color Variables */
+
+/* Fonts Declarations */
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url("/assets/fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url("/assets/fonts/OpenSans-Bold.ttf");
+}
+@font-face {
+  font-family: OpenSans-Semibold;
+  src: url("/assets/fonts/OpenSans-Semibold.ttf");
+}
+@font-face {
+  font-family: Roboto-Light;
+  src: url("/assets/fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("/assets/fonts/Roboto-Regular.ttf");
+}
+/* Fonts Variables */
+$Regular: "OpenSans-Regular";
+$Bold: "OpenSans-Bold";
+$SemiBold: "OpenSans-Semibold";
+$Roboto-Light: "Roboto-Light";
+$Roboto-Regular: "Roboto-Regular";
+/* Fonts Variables */
+/* Fonts Declarations */
+
+.App {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
