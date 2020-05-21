@@ -28,6 +28,7 @@ class Countrystats extends Component {
                                 <p className="world-stats__wrapper-total-new-case"><label>New Case : </label>{item.total_new_cases_today}</p>
                                 <p className="world-stats__wrapper-new-total-death"><label>New Deceased : </label>{item.total_new_deaths_today}</p>
                                 <p className="world-stats__wrapper-active-case"><label>Active Case : </label>{item.total_active_cases}</p>
+                                <p className="world-stats__wrapper-serious-case"><label>Serious Case : </label>{item.total_serious_cases}</p>
                                 <p className="world-stats__wrapper-affected-countries"><label>Affected Countries : </label>{item.total_affected_countries}</p>
                             </div>
                         )

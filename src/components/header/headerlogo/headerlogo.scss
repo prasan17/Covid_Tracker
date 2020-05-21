@@ -1,0 +1,50 @@
+@import "../../../App.scss";
+
+.menu-wrapper {
+  background-color: $black;
+  padding: 10px 40px 0px;
+  display: flex;
+  justify-content: space-between;
+  .title-logo-img {
+    display: flex;
+    padding: 15px;
+    .title-logo-text {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .logo {
+      background-image: url("/assets/images/Coronalogo.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 35px;
+      height: 35px;
+      @media #{$tablet-mobile_max} {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    span {
+      color: $white;
+      font-size: 18px;
+      font-family: $SemiBold;
+      margin-left: 20px;
+    }
+  }
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    align-items: center;
+    li {
+      padding: 15px;
+      a {
+        color: $white;
+        font-size: 18px;
+        font-family: $SemiBold;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
