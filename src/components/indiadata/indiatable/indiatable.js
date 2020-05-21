@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-class Countrytable extends Component {
+class Indiatable extends Component {
     constructor() {
         super();
         this.state = {
@@ -7,20 +7,21 @@ class Countrytable extends Component {
         }
     }
     async componentDidMount() {
-        const url = "https://api.covid19api.com/summary";
+        const url = "https://api.covid19india.org/data.json";
         const response = await fetch(url);
         const data = await response.json();
-        this.setState({ countrydetail: data.Countries })
+        this.setState({ countrydetail: data.statewise })
     }
     render() {
         return (
             this.state.countrydetail ?
                 this.state.countrydetail.map((item, index) =>
                     <tr key={index}>
-                        <td>{item.Country}</td>
-                        <td>{item.TotalConfirmed}</td>
-                        <td>{item.TotalRecovered}</td>
-                        <td>{item.TotalDeaths}</td>
+                        <td>{item.state}</td>
+                        <td>{item.confirmed}</td>
+                        <td>{item.active}</td>
+                        <td>{item.recovered}</td>
+                        <td>{item.deaths}</td>
                     </tr>
                 )
                 :
@@ -28,4 +29,4 @@ class Countrytable extends Component {
         );
     }
 }
-export default Countrytable;
+export default Indiatable;
