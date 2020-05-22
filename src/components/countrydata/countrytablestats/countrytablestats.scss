@@ -1,0 +1,72 @@
+@import "../../../App.scss";
+.country-tablestats {
+  h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: $black;
+    padding: 20px;
+    font-family: $Bold;
+  }
+  .country-datatable {
+    margin: 20px 15px;
+    border-spacing: 0;
+    background-color: $white;
+    border-radius: 3px;
+    animation: scaley 1s normal forwards ease-in-out;
+    height: 500px;
+    display: inline-block;
+    overflow-y: scroll;
+    thead {
+      tr {
+        background-color: $background-totalcaseresult;
+        border-radius: 3px;
+        th {
+          text-align: left;
+          padding: 10px;
+          white-space: nowrap;
+          font-size: 14px;
+          font-family: $Bold;
+        }
+        .country {
+          color: $active-text-color;
+        }
+        .confirmed {
+          color: $background-totalcaseactive;
+        }
+        .recovered {
+          color: $background-totalcaserecovered;
+        }
+        .deceased {
+          color: $background-totalcasedeath;
+        }
+        .active {
+          color: $active-text-color;
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:nth-child(odd) {
+          background-color: $background-colortable;
+        }
+        border-radius: 3px;
+        td {
+          text-align: right;
+          padding: 10px;
+          font-size: 14px;
+          font-size: 14px;
+          text-transform: uppercase;
+          @media #{$mobile_max} {
+            font-size: 12px;
+          }
+          &:first-child {
+            text-align: left;
+            font-family: $Bold;
+            color: $labelcolor;
+          }
+        }
+      }
+    }
+  }
+}

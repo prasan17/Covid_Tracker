@@ -1,0 +1,21 @@
+@import "../../../App.scss";
+.slide {
+  background-color: rgba(32, 26, 162, 0.12549);
+  color: #112369;
+  font-size: 16px;
+  font-family: OpenSans-Semibold;
+  padding: 20px 0;
+  text-align: center;
+  margin: 0;
+  .carousel-inner {
+    overflow: visible;
+  }
+  .carousel-control-prev,
+  .carousel-control-next,
+  .carousel-indicators {
+    display: none;
+  }
+  p {
+    margin: 0;
+  }
+}

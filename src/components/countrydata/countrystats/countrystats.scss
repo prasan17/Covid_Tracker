@@ -1,6 +1,7 @@
 @import "../../../App.scss";
+
 .world-stats__wrapper {
-  animation: 2s scaledetails normal forwards ease-in-out;
+  animation: 2s scaley normal forwards ease-in-out;
   h1 {
     margin: 0;
     font-size: 30px;
@@ -17,7 +18,7 @@
     display: flex;
     flex-wrap: wrap;
     p {
-      width: 30%;
+      width: 27%;
       border-radius: 3px;
       padding: 20px;
       margin: 0 15px 15px;
@@ -32,6 +33,7 @@
       color: $labelcolor;
       text-transform: uppercase;
       font-size: 18px;
+      margin: 0;
     }
   }
   &-total-case {
@@ -58,12 +60,7 @@
   &-affected-countries {
     background: $background-totalcountriesaffected;
   }
-}
-@keyframes scaledetails {
-  from {
-    transform: scaleY(0);
-  }
-  to {
-    transform: scaleY(1);
+  &-serious-case {
+    background: $background-totalcaseseroius;
   }
 }
