@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Countrystats from './countrystats/countrystats';
-// import Countrytable from './countrytable/countrytable';
+import Countrytablestats from './countrytablestats/countrytablestats';
 class Countrydata extends Component {
     render() {
         return (
-            <div>
+            <main>
                 <Countrystats />
-                {/* <Countrytable /> */}
-            </div>
+                <Countrytablestats />
+            </main>
         );
     }
 }
