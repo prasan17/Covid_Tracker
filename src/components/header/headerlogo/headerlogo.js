@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './headerlogo.scss';
 const Headerlogo = () => {
     return (
         <nav className="menu-wrapper">
             <div className="title-logo-img">
-                <a href="/" className="title-logo-text">
+                <a href="/india" className="title-logo-text">
                     <p className="logo"></p>
                     <span>Covid-19 Tracker</span>
                 </a>
@@ -13,10 +13,10 @@ const Headerlogo = () => {
             </div>
             <ul className="menu-link">
                 <li>
-                    <Link to={"/"}>India</Link>
+                    <NavLink to={"/india"} activeClassName="is-active">India</NavLink>
                 </li>
                 <li>
-                    <Link to={"/country"}>World</Link>
+                    <NavLink to={"/country"} activeClassName="is-active">World</NavLink>
                 </li>
             </ul>
         </nav>

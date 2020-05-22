@@ -10,7 +10,6 @@
     padding: 15px;
     .title-logo-text {
       display: flex;
-      align-items: center;
       text-decoration: none;
     }
     .logo {
@@ -44,6 +43,10 @@
         font-family: $SemiBold;
         text-decoration: none;
         cursor: pointer;
+      }
+      .is-active{
+        color: #558dca;
+        border-bottom: 2px solid #558dca;
       }
     }
   }
