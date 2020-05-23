@@ -13,7 +13,7 @@ const Headerlogo = () => {
             </div>
             <ul className="menu-link">
                 <li>
-                    <NavLink to={"/india"} activeClassName="is-active">India</NavLink>
+                    <NavLink to={"/"} activeClassName="is-active">India</NavLink>
                 </li>
                 <li>
                     <NavLink to={"/country"} activeClassName="is-active">World</NavLink>

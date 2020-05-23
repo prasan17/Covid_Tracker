@@ -14,15 +14,13 @@
     background-color: $white;
     border-radius: 3px;
     animation: scaley 1s normal forwards ease-in-out;
-    height: 500px;
-    display: inline-block;
-    overflow-y: scroll;
+    width: 100%;
     thead {
       tr {
         background-color: $background-totalcaseresult;
         border-radius: 3px;
         th {
-          text-align: left;
+          text-align: right;
           padding: 10px;
           white-space: nowrap;
           font-size: 14px;
@@ -30,6 +28,7 @@
         }
         .country {
           color: $active-text-color;
+          text-align: left;
         }
         .confirmed {
           color: $background-totalcaseactive;
@@ -42,6 +41,9 @@
         }
         .active {
           color: $active-text-color;
+        }
+        .update {
+          color: $last-updated;
         }
       }
     }
@@ -57,6 +59,7 @@
           font-size: 14px;
           font-size: 14px;
           text-transform: uppercase;
+          font-family: $SemiBold;
           @media #{$mobile_max} {
             font-size: 12px;
           }
@@ -64,6 +67,32 @@
             text-align: left;
             font-family: $Bold;
             color: $labelcolor;
+          }
+          .cases-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            .delta-confirmed,
+            .delta-recovered,
+            .delta-deaths {
+              font-size: 10px;
+              font-family: $Bold;
+              color: #fff;
+              background: $background-totalcaseactive;
+              border-radius: 4px;
+              margin-right: 5px;
+              padding: 5px;
+            }
+            .cases-confirmed,
+            .cases-recovered,
+            .cases-deaths {
+              width: 60px;
+            }
+            .delta-recovered {
+              background: $background-totalcaserecovered;
+            }
+            .delta-deaths {
+              background: $background-totalcasedeath;
+            }
           }
         }
       }

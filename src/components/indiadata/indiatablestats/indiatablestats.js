@@ -22,6 +22,9 @@ const Indiatablestats = (props) => {
                         <th className="deceased">
                             Deceased
                         </th>
+                        <th className="update">
+                            Last Update
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
