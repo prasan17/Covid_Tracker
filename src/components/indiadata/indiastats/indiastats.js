@@ -6,8 +6,8 @@ const Indiastats = () => {
             const url = "https://api.covid19india.org/data.json";
             const response = await fetch(url);
             const data = await response.json();
-            var updatedsata = data.statewise.slice(0, 1);
-            setDetail(updatedsata);
+            var updatedata = data.statewise.slice(0, 1);
+            setDetail(updatedata);
         }
         fetchdata();
     }, []);
@@ -23,6 +23,7 @@ const Indiastats = () => {
                         <p className="world-stats__wrapper-total-death"><label>Recovered : </label>{item.recovered}</p>
                         <p className="world-stats__wrapper-total-new-case"><label>Deceased : </label>{item.deaths}</p>
                         <p className="world-stats__wrapper-new-total-death"><label>New Deceased : </label>{item.deltadeaths}</p>
+                        <p className="last-updatedtime"><label>Last Updated :</label><span>{item.lastupdatedtime}</span></p>
                     </div>
                 )
             }

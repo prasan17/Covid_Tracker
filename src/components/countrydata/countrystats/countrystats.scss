@@ -63,4 +63,17 @@
   &-serious-case {
     background: $background-totalcaseseroius;
   }
+  .last-updatedtime {
+    display: block;
+    width: 100%;
+    color: $last-updated;
+    padding-bottom: 0;
+    label {
+      text-transform: capitalize;
+      opacity: 0.6;
+      color: $last-updated;
+      font-family: $Bold;
+      padding: 0;
+    }
+  }
 }
