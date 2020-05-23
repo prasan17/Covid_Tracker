@@ -9,8 +9,10 @@ function App() {
     <Router>
       <Header />
       <NavLink to=""></NavLink>
+      <NavLink to="/india"></NavLink>
       <NavLink to="/country"></NavLink>
       <Route exact path="/" component={Indiadata} />
+      <Route exact path="/india" component={Indiadata} />
       <Route path="/country" component={Countrydata} />
     </Router>
   );
