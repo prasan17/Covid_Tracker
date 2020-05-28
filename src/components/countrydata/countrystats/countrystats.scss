@@ -77,3 +77,34 @@
     }
   }
 }
+.input_search {
+  margin: 20px;
+  position: relative;
+  input {
+    outline: none;
+    padding: 15px 20px 15px 50px;
+    font-family: $SemiBold;
+    font-size: 18px;
+    width: 100%;
+    color: $light-grey;
+    background-image: none;
+    border: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    animation: inputscale 2s ease-in-out normal forwards;
+  }
+  &::before {
+    display: inline-block;
+    content: " ";
+    background-image: url(../../../assets//images/search.png);
+    width: 18px;
+    height: 18px;
+    background-size: cover;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    -webkit-animation: inputscale 4s ease-in-out normal forwards;
+    animation: inputscale 2s ease-in-out normal forwards;
+  }
+}

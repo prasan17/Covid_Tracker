@@ -12,22 +12,24 @@ const Indiastats = () => {
         fetchdata();
     }, []);
     return (
-        <div className="world-stats__wrapper">
-            <h1>India Covid-19 Tracker</h1>
-            {
-                detail.map((item, index) =>
-                    <div key={index} className="world-stats__wrapper-detail">
-                        <p className="world-stats__wrapper-total-case"><label>Total Cases : </label>{item.confirmed}</p>
-                        <p className="world-stats__wrapper-total-recovered"><label>New Case : </label>{item.deltaconfirmed}</p>
-                        <p className="world-stats__wrapper-total-unresolved"><label>Active Cases : </label>{item.active}</p>
-                        <p className="world-stats__wrapper-total-death"><label>Recovered : </label>{item.recovered}</p>
-                        <p className="world-stats__wrapper-total-new-case"><label>Deceased : </label>{item.deaths}</p>
-                        <p className="world-stats__wrapper-new-total-death"><label>New Deceased : </label>{item.deltadeaths}</p>
-                        <p className="last-updatedtime"><label>Last Updated :</label><span>{item.lastupdatedtime}</span></p>
-                    </div>
-                )
-            }
-        </div>
+        <>
+            <div className="world-stats__wrapper">
+                <h1>India Covid-19 Tracker</h1>
+                {
+                    detail.map((item, index) =>
+                        <div key={index} className="world-stats__wrapper-detail">
+                            <p className="world-stats__wrapper-total-case"><label>Total Cases : </label>{item.confirmed}</p>
+                            <p className="world-stats__wrapper-total-recovered"><label>New Case : </label>{item.deltaconfirmed}</p>
+                            <p className="world-stats__wrapper-total-unresolved"><label>Active Cases : </label>{item.active}</p>
+                            <p className="world-stats__wrapper-total-death"><label>Recovered : </label>{item.recovered}</p>
+                            <p className="world-stats__wrapper-total-new-case"><label>Deceased : </label>{item.deaths}</p>
+                            <p className="world-stats__wrapper-new-total-death"><label>New Deceased : </label>{item.deltadeaths}</p>
+                            <p className="last-updatedtime"><label>Last Updated :</label><span>{item.lastupdatedtime}</span></p>
+                        </div>
+                    )
+                }
+            </div>
+        </>
     );
 }
 export default Indiastats;
