@@ -1,12 +1,12 @@
 import React from 'react'
 import './charts.scss';
-import Chartconfirmed from './chartsconfirmed/chartconfirmed';
-import Chartrecovered from './chartsrecovered/chartsrecovered'
+import LineCharts from './linecharts/linecharts';
+// import Doughnutchart from './doughnutchart/doughnutchart';
 function charts() {
     return (
         <main className="charts_wrapper">
-            <Chartconfirmed />
-            <Chartrecovered />
+            <LineCharts />
+            {/* <Doughnutchart /> */}
         </main>
     )
 }

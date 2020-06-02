@@ -1,29 +1,51 @@
 import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import axios from 'axios';
-const Chartrecovered = () => {
+const LineCharts = () => {
     const [chartdata, setChartdata] = useState({});
     const chart = () => {
         let activedate = [];
         let recovered = [];
+        let confirmed = [];
+        let deceased = [];
         axios
             .get('https://api.covid19india.org/data.json')
             .then(response => {
-                for (const dataObj of response.data.cases_time_series) {
-                    activedate.push(new Date(dataObj.date));
+                response.data.cases_time_series.forEach((dataObj, index) => {
+                    activedate.push((dataObj.date));
                     recovered.push(parseInt(dataObj.totalrecovered));
-                }
+                    confirmed.push(parseInt(dataObj.totalconfirmed));
+                    deceased.push(parseInt(dataObj.totaldeceased));
+                });
                 setChartdata({
                     labels: activedate,
                     datasets: [{
                         data: recovered,
-                        label: 'Line Dataset',
+                        label: 'Totol Recovered Cases',
                         backgroundColor: [
-                            'rgba(40, 167, 69, 0.005)'
+                            'rgba(40, 167, 69, 0.2)'
                         ],
                         borderWidth: 4,
                         borderColor: 'rgb(40, 167, 69)'
-                    }]
+                    }, {
+                        data: confirmed,
+                        label: 'Total Confirmed Cases',
+                        backgroundColor: [
+                            'rgba(255,7,58,0.2)'
+                        ],
+                        borderWidth: 4,
+                        borderColor: '#ff073a'
+                    },
+                    {
+                        data: deceased,
+                        label: 'Total Deceased Cases',
+                        backgroundColor: [
+                            'rgba(108,117,125,0.2)'
+                        ],
+                        borderWidth: 4,
+                        borderColor: '#6c757d'
+                    }
+                    ],
                 });
             })
             .catch(err => {
@@ -34,25 +56,25 @@ const Chartrecovered = () => {
         chart();
     }, []);
     return (
-        <div className="charts__wrapper2">
+        <div className="charts__wrapper-Line">
             <Line data={chartdata} options={{
                 responsive: true,
                 title: {
-                    text: 'Total Recovered',
+                    text: 'Chart of Total Confirmed, Recovered, Deceased in India',
                     display: true,
-                    fontSize: 18,
-                    fontColor: 'rgba(40,167,69,.6)',
+                    fontSize: 16,
+                    fontColor: '#4b1eaa',
                     fontFamily: "Verdana"
                 },
                 scales: {
                     yAxes: [
                         {
                             ticks: {
-                                fontColor: 'rgba(40,167,69,.6)',
+                                fontColor: '#4b1eaa',
                                 fontSize: 12,
-                                fontFamily: "Verdana",
+                                fontFamily: "Verdana-Bold",
                                 autoSkip: true,
-                                maxTicksLimit: 10
+                                maxTicksLimit: 20,
                             },
                             gridLines: {
                                 display: false
@@ -66,11 +88,11 @@ const Chartrecovered = () => {
                             },
                             type: 'time',
                             ticks: {
-                                fontColor: 'rgba(40,167,69,.6)',
+                                fontColor: '#4b1eaa',
                                 fontSize: 12,
-                                fontFamily: "Verdana",
+                                fontFamily: "Verdana-Bold",
                                 autoSkip: true,
-                                maxTicksLimit: 12
+                                maxTicksLimit: 30,
                             },
                         }
                     ]
@@ -80,4 +102,4 @@ const Chartrecovered = () => {
     );
 }
 
-export default Chartrecovered;
+export default LineCharts;

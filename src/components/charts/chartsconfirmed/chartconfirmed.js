@@ -17,7 +17,7 @@ const Chartconfirmed = () => {
                     labels: date,
                     datasets: [{
                         data: confirmed,
-                        label: 'Line Dataset',
+                        label: 'Total Confirmed Cases',
                         backgroundColor: [
                             'rgba(255,7,58,0.005)'
                         ],
