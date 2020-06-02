@@ -3,15 +3,16 @@ import axios from 'axios';
 import Searchworld from '../../search/searchworld';
 const Countrytable = () => {
     const [country, setCountry] = useState([]);
-    const [err, setErr] = useState('');
     const [search, setSearch] = useState('');
 
     useEffect(() => {
-        axios.get('https://api.covid19api.com/summary').
-            then(response => {
+        axios
+            .get('https://api.covid19api.com/summary')
+            .then(response => {
                 setCountry(response.data.Countries);
-            }).catch(err => {
-                setErr('Something went Wrong, Data no available !!!')
+            })
+            .catch(err => {
+                console.log(err);
             })
     });
     const handleSearch = (e) => {
@@ -19,9 +20,13 @@ const Countrytable = () => {
             e.target.value
         )
     }
-    const filtercountry = country.filter((countryname) => {
-        return countryname.Country.toLowerCase().includes(search.toLowerCase())
-    });
+    const filtercountry = country
+        .filter((countryname) => {
+            return countryname.Country
+                .toLowerCase()
+                .includes(search
+                    .toLowerCase())
+        });
     return (
         <>
             <Searchworld handlewolrdData={handleSearch} />
@@ -69,9 +74,6 @@ const Countrytable = () => {
                             )
                             :
                             null}
-                        {
-                            err ? <tr><td>{err}</td></tr> : null
-                        }
                     </tbody>
                 </table>
             </div>

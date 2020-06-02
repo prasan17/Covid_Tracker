@@ -18,6 +18,9 @@ const Headerlogo = () => {
                 <li>
                     <NavLink to={"/country"} activeClassName="is-active">World</NavLink>
                 </li>
+                <li>
+                    <NavLink to={"/charts"} activeClassName="is-active">Charts</NavLink>
+                </li>
             </ul>
         </nav>
     );

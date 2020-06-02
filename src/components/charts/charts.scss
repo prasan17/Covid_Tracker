@@ -1,0 +1,16 @@
+.charts_wrapper {
+  margin: 20px auto;
+  .charts__wrapper1,
+  .charts__wrapper2 {
+    border-radius: 4px;
+    canvas {
+      background: rgba(255, 7, 58, 0.2);
+      border-radius: 4px;
+    }
+  }
+  .charts__wrapper2 {
+    canvas {
+      background: rgba(40, 167, 69, 0.2);
+    }
+  }
+}

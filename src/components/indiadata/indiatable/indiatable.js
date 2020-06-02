@@ -6,10 +6,12 @@ const Indiatable = () => {
     const [err, setErr] = useState('');
     const [search, setSearch] = useState('');
     useEffect(() => {
-        axios.get('https://api.covid19india.org/data.json').
-            then(response => {
+        axios
+            .get('https://api.covid19india.org/data.json')
+            .then(response => {
                 setState(response.data.statewise)
-            }).catch(error => {
+            })
+            .catch(error => {
                 setErr('Error in getting data or Something went wrong')
             });
     })
